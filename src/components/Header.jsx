@@ -18,34 +18,36 @@ const Header = () => {
             }
         })
     }, [])
-    return <header ref={headerRef} className="pt-[60px] fixed top-0 left-0 w-full z-50 transition-all duration-200 px-[30px]">
-        <div className="container px-[60px] mx-auto flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
-            <a>
-                <img src="/src/assets/images/logo.svg" alt="logo-img" />
-            </a>
-            <nav>
-                <ul className="flex items-center gap-[50px]">
-                    {links.map((link) => {
-                        return (
-                            <li key={link}>
-                                <a href={`/${link.toLowerCase()}`}
-                                    className="
+    return (
+        <header ref={headerRef} className="pt-[60px] fixed top-0 left-0 w-full z-50 transition-all duration-200 px-[30px]">
+            <div className="container   flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
+                <a>
+                    <img src="/src/assets/images/logo.svg" alt="logo-img" />
+                </a>
+                <nav>
+                    <ul className="flex items-center gap-[50px]">
+                        {links.map((link) => {
+                            return (
+                                <li key={link}>
+                                    <a href={`/${link.toLowerCase()}`}
+                                        className="
                                    text-white opacity-[0.9]
                                      hover:opacity-[1]
                                      hover:underline 
                                      transition-opacity
                                      duration-200">
-                                    {link}
-                                </a>
-                            </li>
-                        )
-                    })}
+                                        {link}
+                                    </a>
+                                </li>
+                            )
+                        })}
 
 
-                </ul>
-            </nav>
-        </div>
-    </header>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    )
 }
 
 export default Header;

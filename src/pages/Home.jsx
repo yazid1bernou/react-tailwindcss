@@ -1,12 +1,14 @@
+import { Fragment } from "react";
+import Landing from "../components/Landing";
 
 
 const Home = () => {
-    return <>
+    return (
+        <Fragment>
 
-        <h1>
-            This is Home
-        </h1>
-    </>
+            <Landing />
+        </Fragment>
+    )
 }
 
-export default Home;
+export default Home;     
